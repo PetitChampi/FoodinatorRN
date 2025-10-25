@@ -1,45 +1,70 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Icon from "react-native-vector-icons/Ionicons";
+import { ModalProvider } from "./src/contexts/ModalProvider";
+import { PlannerTab } from "./src/screens/PlannerTab";
+import { ScheduleTab } from "./src/screens/ScheduleTab";
+import { GroceryTab } from "./src/screens/GroceryTab";
+import { OfflineStatus } from "./src/components/OfflineStatus";
+import { colors } from "./src/styles/theme";
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+const Tab = createBottomTabNavigator();
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+export default function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <ModalProvider>
+        <NavigationContainer>
+          <OfflineStatus />
+          <Tab.Navigator
+            screenOptions={{
+              tabBarActiveTintColor: colors.primary,
+              tabBarInactiveTintColor: colors.textTertiary,
+              tabBarStyle: {
+                backgroundColor: colors.cardBackground,
+                borderTopColor: colors.border,
+              },
+              headerStyle: {
+                backgroundColor: colors.primary,
+              },
+              headerTintColor: colors.textWhite,
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          >
+            <Tab.Screen
+              name="Planner"
+              component={PlannerTab}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <Icon name="list-outline" size={size} color={color} />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Schedule"
+              component={ScheduleTab}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <Icon name="calendar-outline" size={size} color={color} />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Groceries"
+              component={GroceryTab}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <Icon name="cart-outline" size={size} color={color} />
+                ),
+              }}
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </ModalProvider>
     </SafeAreaProvider>
   );
 }
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
