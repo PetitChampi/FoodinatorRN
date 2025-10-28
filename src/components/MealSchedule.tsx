@@ -2,8 +2,8 @@ import React, { useMemo, useCallback } from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { MealSlot } from "./MealSlot";
 import { ScheduleControls } from "./ScheduleControls";
-import { useFoodinatorStore } from "../store/useFoodinatorStore";
-import { colors, spacing, typography } from "../styles/theme";
+import { useFoodinatorStore } from "@/store/useFoodinatorStore";
+import { colors, spacing, typography } from "@/styles/theme";
 
 export const MealSchedule: React.FC = () => {
   const {

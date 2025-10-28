@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Modal as RNModal, StyleSheet } from "react-native";
-import { useModal } from "../contexts/ModalContext";
-import { colors, spacing, borderRadius, shadows } from "../styles/theme";
+import { useModal } from "@/contexts/ModalContext";
+import { colors, spacing, borderRadius, shadows } from "@/styles/theme";
 
 export function Modal() {
   const { isOpen, content, size, closeModal } = useModal();

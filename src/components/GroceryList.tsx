@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { View, Text, ScrollView, TouchableOpacity, TextInput, StyleSheet } from "react-native";
-import { GroceryItem } from "../models/types";
-import { getIngredientById } from "../models/ingredients";
-import { getMealById } from "../models/mealData";
-import { useFoodinatorStore } from "../store/useFoodinatorStore";
-import { useDebounce } from "../hooks/useDebounce";
+import { GroceryItem } from "@/models/types";
+import { getIngredientById } from "@/models/ingredients";
+import { getMealById } from "@/models/mealData";
+import { useFoodinatorStore } from "@/store/useFoodinatorStore";
+import { useDebounce } from "@/hooks/useDebounce";
 import { Icon } from "./Icon";
 import { RestockManager } from "./RestockManager";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 type GroceryTabType = "list" | "restock";
 
@@ -53,7 +53,7 @@ export const GroceryList: React.FC = () => {
       checked: checkedItems[id] || false,
     }));
 
-    const groupedByMeal = new Map<string, GroceryItem[]>();
+    const mealGroups = new Map<string, GroceryItem[]>();
     const assignedIngredients = new Set<string>();
 
     const uniqueMealsInOrder = [...new Set(mealIdsInOrder.filter(id => id !== null) as string[])];
@@ -75,7 +75,7 @@ export const GroceryList: React.FC = () => {
       });
 
       if (mealGroupItems.length > 0) {
-        groupedByMeal.set(mealId, mealGroupItems);
+        mealGroups.set(mealId, mealGroupItems);
       }
     });
 
@@ -88,7 +88,7 @@ export const GroceryList: React.FC = () => {
     return {
       items: allItems,
       isEmpty: allItems.length === 0,
-      groupedByMeal,
+      groupedByMeal: mealGroups,
       seasoningStaples: seasoningStaplesItems,
     };
   }, [mealSlots, checkedItems]);

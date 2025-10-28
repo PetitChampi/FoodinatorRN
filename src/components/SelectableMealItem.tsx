@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Meal } from "../models/types";
-import { useModal } from "../contexts/ModalContext";
+import { Meal } from "@/models/types";
+import { useModal } from "@/contexts/ModalContext";
 import { MealDetailsModal } from "./MealDetailsModal";
 import { MealCard } from "./MealCard";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 interface SelectableMealItemProps {
   meal: Meal;

@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
-import { getIngredientById, ingredients } from "../models/ingredients";
-import { meals } from "../models/mealData";
+import { getIngredientById, ingredients } from "@/models/ingredients";
+import { meals } from "@/models/mealData";
 import { SelectableMealItem } from "./SelectableMealItem";
 import { TagFilter } from "./TagFilter";
 import { SearchInput } from "./SearchInput";
-import { useFoodinatorStore, useRemainingSlots } from "../store/useFoodinatorStore";
-import { Ingredient, Meal, MealTagId } from "../models/types";
-import { ConvenienceTag, getTagById } from "../models/tagDefinitions";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { useFoodinatorStore, useRemainingSlots } from "@/store/useFoodinatorStore";
+import { Ingredient, Meal, MealTagId } from "@/models/types";
+import { ConvenienceTag, getTagById } from "@/models/tagDefinitions";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 export const MealSelector: React.FC = () => {
   const {

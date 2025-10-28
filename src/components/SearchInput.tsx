@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import { Icon } from "./Icon";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 interface SearchInputProps {
   value: string;

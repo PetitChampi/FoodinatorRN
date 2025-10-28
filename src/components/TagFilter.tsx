@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, ScrollView, Modal, StyleSheet } from "react-native";
-import { TAG_CATEGORIES, getTagsByCategory, TagCategory, getTagById } from "../models/tagDefinitions";
-import { useFoodinatorStore } from "../store/useFoodinatorStore";
+import { TAG_CATEGORIES, getTagsByCategory, TagCategory, getTagById } from "@/models/tagDefinitions";
+import { useFoodinatorStore } from "@/store/useFoodinatorStore";
 import { Icon } from "./Icon";
-import { MealTagId } from "../models/types";
-import { colors, spacing, typography, borderRadius, shadows } from "../styles/theme";
+import { MealTagId } from "@/models/types";
+import { colors, spacing, typography, borderRadius, shadows } from "@/styles/theme";
 
 export const TagFilter: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

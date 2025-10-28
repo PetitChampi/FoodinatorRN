@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { colors, spacing, typography, borderRadius, shadows } from "../styles/theme";
+import { colors, spacing, typography, borderRadius, shadows } from "@/styles/theme";
 
 interface MealCardProps {
   imageUrl?: string;

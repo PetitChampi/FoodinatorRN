@@ -3,12 +3,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/Ionicons";
-import { ModalProvider } from "./src/contexts/ModalProvider";
-import { PlannerTab } from "./src/screens/PlannerTab";
-import { ScheduleTab } from "./src/screens/ScheduleTab";
-import { GroceryTab } from "./src/screens/GroceryTab";
-import { OfflineStatus } from "./src/components/OfflineStatus";
-import { colors } from "./src/styles/theme";
+import { ModalProvider } from "@/contexts/ModalProvider";
+import { PlannerTab } from "@/screens/PlannerTab";
+import { ScheduleTab } from "@/screens/ScheduleTab";
+import { GroceryTab } from "@/screens/GroceryTab";
+import { OfflineStatus } from "@/components/OfflineStatus";
+import { colors } from "@/styles/theme";
 
 const Tab = createBottomTabNavigator();
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { WeeklyPlanDisplay } from "../components/WeeklyPlanDisplay";
-import { MealSelector } from "../components/MealSelector";
-import { colors } from "../styles/theme";
+import { WeeklyPlanDisplay } from "@/components/WeeklyPlanDisplay";
+import { MealSelector } from "@/components/MealSelector";
+import { colors } from "@/styles/theme";
 
 export const PlannerTab: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { useModal, ModalSize } from "../contexts/ModalContext";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { useModal, ModalSize } from "@/contexts/ModalContext";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 interface ConfirmationModalProps {
   title: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { getMealById } from "../models/mealData";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { getMealById } from "@/models/mealData";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 interface MealSlotProps {
   mealId: string | null;

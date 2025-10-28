@@ -2,7 +2,7 @@ import { Meal } from "@/models/types";
 import { IngredientId, SeasoningStapleId } from "@/models/ingredients";
 import { CookingMethodTag, BaseTag, ProteinSourceTag, ConvenienceTag } from "@/models/tagDefinitions";
 
-export const honeyGarlicChickenSkewers: Meal = {
+export const salmonPokePlate: Meal = {
   id: "salmon-poke-plate",
   name: "Salmon poke plate",
   imageUrl: "./img-meals/salmon-poke-plate.jpg",

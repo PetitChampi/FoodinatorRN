@@ -1,11 +1,11 @@
 import React from "react";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { getMealById } from "../models/mealData";
-import { useModal } from "../contexts/ModalContext";
+import { getMealById } from "@/models/mealData";
+import { useModal } from "@/contexts/ModalContext";
 import { MealDetailsModal } from "./MealDetailsModal";
 import { MealCard } from "./MealCard";
 import { QuantitySelector } from "./QuantitySelector";
-import { colors, spacing, typography } from "../styles/theme";
+import { colors, spacing, typography } from "@/styles/theme";
 
 interface PlannedMealItemProps {
   mealId: string;

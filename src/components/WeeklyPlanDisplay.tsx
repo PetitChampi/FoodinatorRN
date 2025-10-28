@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 import { useConfirmationModal } from "./ConfirmationModal";
-import { getMealById } from "../models/mealData";
+import { getMealById } from "@/models/mealData";
 import { PlannedMealItem } from "./PlannedMealItem";
-import { useFoodinatorStore } from "../store/useFoodinatorStore";
-import { SelectedMeal } from "../models/types";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { useFoodinatorStore } from "@/store/useFoodinatorStore";
+import { SelectedMeal } from "@/models/types";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 export const WeeklyPlanDisplay: React.FC = () => {
   const { openConfirmation } = useConfirmationModal();

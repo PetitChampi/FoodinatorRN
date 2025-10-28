@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
-import { getMealById } from "../models/mealData";
-import { getIngredientById } from "../models/ingredients";
-import { getTagById } from "../models/tagDefinitions";
+import { getMealById } from "@/models/mealData";
+import { getIngredientById } from "@/models/ingredients";
+import { getTagById } from "@/models/tagDefinitions";
 import { Icon } from "./Icon";
-import { colors, spacing, typography, borderRadius } from "../styles/theme";
+import { colors, spacing, typography, borderRadius } from "@/styles/theme";
 
 interface MealDetailsModalProps {
   mealId: string;

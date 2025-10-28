@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { useOffline } from "../hooks/useOffline";
-import { colors, spacing, typography } from "../styles/theme";
+import { useOffline } from "@/hooks/useOffline";
+import { colors, spacing, typography } from "@/styles/theme";
 
 export const OfflineStatus: React.FC = () => {
   const { isOnline, isOfflineReady } = useOffline();
